@@ -1,7 +1,9 @@
 name: Docs Enhancement
 description: Improve documentation structure, content, or automation.
 title: "Docs: "
-labels: ["documentation"]
+labels: 
+  - documentation
+
 body:
   - type: checkboxes
     id: common-tasks
@@ -11,32 +13,33 @@ body:
         - label: Update cross-repo links
         - label: Create/update ADR
         - label: Fix broken docs
+
   - type: textarea
     id: custom-tasks
     attributes:
       label: Additional Tasks
       description: Add custom checkboxes below (copy-paste: `- [ ] Task`).
-      placeholder: |
+      placeholder: |-
         - [ ] Update CONTRIBUTING.md
         - [ ] Validate GitHub Actions
+
   - type: textarea
     id: details
     attributes:
       label: Details
       description: Describe the problem or changes needed.
-      placeholder: |
+      placeholder: |-
         **Example**:  
         - Link `python-fetcher/docs` to the central wiki.  
         - ADR-003 is missing.  
-    # Validation is a top-level key (same indentation as `attributes`) 
     validations:
       required: true
+
   - type: textarea
     id: adr
     attributes:
       label: Related ADR
       description: Link existing ADRs or note if a new one is needed.
       placeholder: "[ADR-003](./ADRs/003-documentation-standards-enforcement.md)"
-    # Validation is a top-level key
     validations:
       required: true
