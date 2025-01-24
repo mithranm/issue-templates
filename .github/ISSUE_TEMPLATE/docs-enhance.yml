@@ -1,36 +1,29 @@
 name: Docs Enhancement
 description: Improve documentation structure, content, or automation.
-title: "Docs: "
+title: "[Docs] "
 labels:
   - documentation
 body:
-  - type: checkboxes
-    id: common-tasks
-    attributes:
-      label: Common Tasks (Check All That Apply)
-      options:
-        - label: Update cross-repo links
-        - label: Create/update ADR
-        - label: Fix broken docs
   - type: textarea
-    id: custom-tasks
+    id: tasks
     attributes:
-      label: Additional Tasks
-      description: Add custom checkboxes below (copy-paste `- [ ] Task`)
+      label: Tasks
+      description: Add checkboxes below (copy-paste `- [ ] Task`)
       placeholder: "- [ ] Update CONTRIBUTING.md"
   - type: textarea
     id: details
     attributes:
       label: Details
       description: Describe the problem or changes needed
-      placeholder: Link python-fetcher/docs to the central wiki
+      placeholder: Link repo docs to the central wiki.
     validations:
       required: true
-  - type: textarea
-    id: adr
-    attributes:
-      label: Related ADR
-      description: Link existing ADRs or note if a new one is needed
-      placeholder: ADR-003
-    validations:
-      required: true
+  - type: checkboxes  
+    id: reminders  
+    attributes:  
+      label: Reminders  
+      description: Check these before marking the issue as done.  
+      options:  
+        - label: Create branch for this issue
+        - label: Verify cross-repo links  
+        - label: Link ADR if necessary
