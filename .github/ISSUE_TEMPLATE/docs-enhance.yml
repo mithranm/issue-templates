@@ -19,19 +19,14 @@ body:
     attributes:
       label: Additional Tasks
       description: Add custom checkboxes below (copy-paste: `- [ ] Task`).
-      placeholder: |-
-        - [ ] Update CONTRIBUTING.md
-        - [ ] Validate GitHub Actions
+      placeholder: "- [ ] Update CONTRIBUTING.md\n- [ ] Validate GitHub Actions"
 
   - type: textarea
     id: details
     attributes:
       label: Details
       description: Describe the problem or changes needed.
-      placeholder: |-
-        **Example**:  
-        - Link `python-fetcher/docs` to the central wiki.  
-        - ADR-003 is missing.  
+      placeholder: "**Example**:\n- Link `python-fetcher/docs` to the central wiki.\n- ADR-003 is missing."
     validations:
       required: true
 
